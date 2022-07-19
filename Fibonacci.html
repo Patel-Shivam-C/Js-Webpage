@@ -1,0 +1,55 @@
+<html>
+
+<head>
+    <title> Home page of Assignment1 </title>	
+	<link href="StyleSheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="container">
+            <h1><b>Computer Engineering Computing Science - Web Programming</b>
+                <div id="menu">
+                    <h2>
+                        <a href="index.html" src="index.html" target="_blank">Index</a>
+                        <a href="Fibonacci.html" src="Fibonacci.html" target="_blank">Fibonacci</a>
+                        <a href="Pattern.html" src="Pattern.html" target="_blank">Pattern</a>
+                    </h2>
+                </div>
+            </h1>
+        </div>
+    </header>
+    
+    <strong>Fibonacci Generator</strong>
+    <br>
+
+    <script>
+        var n = window.prompt("How many fibonacci numbers you want to generate")
+        fibonacci(n);
+        function fibonacci(number){
+            if (number < 3){
+                return 1;
+            }
+
+            var previousNumber = 0;
+            var currentNumber = 1;
+            
+            for (var i = 0; i <= number; i++){
+                var newNumber = currentNumber + previousNumber;
+                document.write("Fib["+i+"] = "+previousNumber);
+                previousNumber = currentNumber;
+                currentNumber = newNumber;
+                document.write("<br/>");
+            }
+        }
+    </script>
+
+    <div id="footer">			
+        <p>Student Number: 041043423</p>
+        <p>Shivam</p>
+        <p>Patel</p>
+        <p>pate0968@algonquinlive.com</p>				
+    </div>
+
+</body>
+</html>

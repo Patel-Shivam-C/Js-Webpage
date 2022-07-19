@@ -1,0 +1,90 @@
+<html>
+
+<head>
+    <title> Home page of Assignment1 </title>	
+	<link href="StyleSheet.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div id="container">
+            <h1><b>Computer Engineering Computing Science - Web Programming</b>
+                <div id="menu">
+                    <h2>
+                        <a href="index.html" src="index.html" target="_blank">Index</a>
+                        <a href="Fibonacci.html" src="Fibonacci.html" target="_blank">Fibonacci</a>
+                        <a href="Pattern.html" src="Pattern.html" target="_blank">Pattern</a>
+                    </h2>
+                </div>
+            </h1>
+        </div>
+    </header>
+    
+    <strong>Pattern Generator</strong>
+    <br>
+
+    <script>
+        var patternName = window.prompt("Please select the pattern you want to draw"+"\r\n"+"(1: Triangle, 2:Diamond, 3: Hollow- Rectangle)");
+        drawing(patternName);
+        function drawing (patternName) {
+            if (patternName == 1){
+                var size = window.prompt("Please enter the size of the triangle");
+                var row = 0;
+                for (var i = 0; i < size; i++){
+                    row = row +1;
+                    for (var j = 0; j < row; j++){
+                        document.write("*");
+                    }
+                    document.write("<br/>");
+                }
+            }
+            if (patternName == 2){
+                var size = window.prompt("Please enter the size of the Diamond");
+                var row = 0;
+                for (var i = 0; i < size/2; i++){
+                    row = row +1;
+                    for (var j = 0; j < row; j++){
+                        document.write("*");
+                    }
+                    document.write("<br/>");
+                    
+                }
+                var lastRow = size/2;
+                for (var z = (size/2); z>0;z--){
+                    lastRow = lastRow-1;
+                    for (var l = lastRow; l >= 0; l--){
+                        document.write("*");
+                    }
+                    document.write("<br/>");
+                }
+            }
+
+            if (patternName == 3){
+                var size = window.prompt("Please enter the size of the hollow-rectangular");
+                var row = 0;
+                var coloum = 5
+                for(let i=1; i<=size; i++){
+                    // row = row +1;
+                    for(let j=1; j<=coloum; j++){
+                        if(i == 1 || j == 1 || i == size || j == coloum){
+                            document.write("*");
+                        }else{
+                            document.write("&nbsp&nbsp");
+                        }
+                    }
+                    document.write("<br/>");
+                }
+            }
+        }
+
+    </script>
+
+
+    <div id="footer">			
+        <p>Student Number: 041043423</p>
+        <p>Shivam</p>
+        <p>Patel</p>
+        <p>pate0968@algonquinlive.com</p>				
+    </div>
+</body>
+</html>
